@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../db'); // kendi db bağlantı dosyana göre düzenle
+const sequelize = require('../db'); 
 
 const User = sequelize.define('User', {
   name: {

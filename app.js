@@ -23,11 +23,10 @@ app.use(errorHandler);
 const port = process.env.PORT || 5000;
 const User = require('./models/User');
 const Customer = require('./models/Customer');
-// ilişkileri tanımla
 User.hasMany(Customer, { foreignKey: 'user_id' });
 Customer.belongsTo(User, { foreignKey: 'user_id' });
 
-sequelize.sync({ alter: true }) // 👈 alter true ise tabloyu günceller, force true ise silip yeniden oluşturur
+sequelize.sync({ alter: true }) //  alter true tabloyu günceller, force true silip yeniden oluşturur
   .then(() => {
     console.log('Database synchronized');
     app.listen(port, () => {
