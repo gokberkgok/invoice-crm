@@ -2,9 +2,11 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const app = express();
 const customerRoutes = require('./routers/customerRoutes');
+const userRoutes = require('./routers/userRoutes');
 const errorHandler = require('./middlewares/errorHandler');
-app.use(express.json());
 const sequelize = require('./db');
+
+app.use(express.json());
 
 try {
     sequelize.authenticate();
@@ -16,8 +18,8 @@ try {
 app.get('/', function (req,res) {
     res.send("hey");
 });
-
 app.use('/api/customers', customerRoutes);
+app.use('/api/users', userRoutes);
 app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
@@ -26,7 +28,7 @@ const Customer = require('./models/Customer');
 User.hasMany(Customer, { foreignKey: 'user_id' });
 Customer.belongsTo(User, { foreignKey: 'user_id' });
 
-sequelize.sync({ alter: true }) //  alter true tabloyu günceller, force true silip yeniden oluşturur
+sequelize.sync() //  alter true tabloyu günceller, force true silip yeniden oluşturur
   .then(() => {
     console.log('Database synchronized');
     app.listen(port, () => {
