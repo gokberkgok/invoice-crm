@@ -15,7 +15,7 @@ const Customer = sequelize.define('Customer', {
     type: DataTypes.STRING,
     allowNull: true,
   },
- user_id: {
+  user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
@@ -28,5 +28,5 @@ const Customer = sequelize.define('Customer', {
   tableName: 'customers',
   timestamps: true,
 });
-
+Customer.belongsTo(User, { foreignKey: 'user_id', as : 'user' });
 module.exports = Customer;
