@@ -2,8 +2,8 @@ const asyncHandler = require('express-async-handler');
 const User = require('../../models/User');
 
 const addUser = asyncHandler(async (req,res) => {
-     const {name, phone, email} = req.body;
-     if (!name || !phone || !email) {
+     const {name, email} = req.body;
+     if (!name || !email) {
           res.status(400);
           throw new Error("Name,phone,email fields are required");
      }
@@ -13,7 +13,7 @@ const addUser = asyncHandler(async (req,res) => {
           res.status(400);
           throw new Error("User with this name already exists");
      }
-     await User.create({name : name, phone:phone, email:email});
+     await User.create({name : name, email:email});
      res.status(201).json({ message: `User added : ${name}` });
 });
 

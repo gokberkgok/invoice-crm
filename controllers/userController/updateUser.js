@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler');
 const User = require('../../models/User');
 
 const updateUser = asyncHandler(async (req,res) => {
-     const { name, phone, email } = req.body;
+     const { name, email } = req.body;
      const { id } = req.params;
      if (!name) {
           res.status(400);
@@ -14,7 +14,7 @@ const updateUser = asyncHandler(async (req,res) => {
           res.status(400);
           throw new Error("User id not found");
      }
-     await User.update({name:name, phone:phone, email:email}, {where : {id:id}});
+     await User.update({name:name, email:email}, {where : {id:id}});
      res.status(201).json({ message: `User updated name : ${name} with id : ${id}` });
 });
 
