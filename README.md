@@ -8,18 +8,19 @@ Header sample:
 ---
 
 ## Setup
-1. Clone this project and go to project path
+
+**1. Clone this project and go to project path**
 ```bash
 https://github.com/gokberkgok/invoice-crm.git
 cd invoice-crm
 ```
 
-2. Install packet
+**2. Install packet**
 ```bash
 npm install
 ```   
 
-3. .env file
+**3.  .env file**
 ```bash
 PORT = 5000
 DB_HOST = 'localhost'
@@ -29,11 +30,11 @@ DB_DATABASE = 'invoice-crm'
 JWT_SECRET = 'secrettoken'
 ``` 
 
-4. Run this project
+**4. Run this project**
 ```bash
 node server.js
 ```
-or run with dev (nodemon)
+**or run with dev (nodemon)**
 ```bash
 npm run dev
 ```
@@ -197,4 +198,5 @@ npm run dev
 
 
 - **[User]**(https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-022bcd37-0342-4000-88aa-bf2877084307?action=share&creator=36620451)
+
 
