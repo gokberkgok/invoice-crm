@@ -191,12 +191,9 @@ npm run dev
 
 ## Postman API Collections
 
-- **[Customer]**(https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-25bf3563-7165-4383-95f1-9c27dec38fcb?action=share&creator=36620451)
+- **[Customer](https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-25bf3563-7165-4383-95f1-9c27dec38fcb?action=share&creator=36620451)**
 
+- **[Invoice](https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-c13d7bcc-8a98-4bce-8df9-b6ebeae57308?action=share&creator=36620451)**
 
-- **[Invoice]**(https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-c13d7bcc-8a98-4bce-8df9-b6ebeae57308?action=share&creator=36620451)
-
-
-- **[User]**(https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-022bcd37-0342-4000-88aa-bf2877084307?action=share&creator=36620451)
-
+- **[User](https://www.postman.com/winter-capsule-70582/workspace/invoice-crm-api/collection/36620451-022bcd37-0342-4000-88aa-bf2877084307?action=share&creator=36620451)**
 
